@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+    <meta charset="utf-8">
+    <
+    meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>FINDNEWHOME-유기견 등록& 찾기</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet"/>
+    <style>
+       table{
+        margin-top:-10px;
+         margin-bottom:20px;
+        margin-left:290px;
+        }
+        td{ 
+        padding:8px;
+        }
+        .dropbtn {
+         margin-left:5px;
+margin-top:6.5px;
+    color: #676b68;
+background-color:#343a40;
+    font-size: 17px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    background-color:white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color:#decc90;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #decc90;}
+
+
+
+        
+    </style>
+</head>
+<body>
+      <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="index.jsp">FINDNEWHOME</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link disabled" href="index.jsp">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="location.html">LOCATION</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="registration.jsp">REGISTRATION</a>
+            </li>
+              
+
+<div class="dropdown">
+  <li class="dropbtn">BOARD</>
+  <div class="dropdown-content">
+    <a href="saveBoard.jsp?pageNum=1">보호 게시판</a>
+    <a href="lostBoard.jsp?pageNum=1">찾는 게시판</a>
+</div>
+</div>
+              <li class="nav-item">
+                  <a class="nav-link disabled" href="login.html" style="background-color: #decc90; margin-left: 500px; width: 100px; border: none; border-radius: 10px; text-align: center; color: white;">Log In</a>
+            </li>
+            </ul>
+        </div>
+      </nav>
+    </header>
+    <br /><br /><br />
+    <section>
+<br /><br />  
+        <form action="join.jsp" method="get" enctype="multipart/form-data" style="margin-left:150px; width: 817px; ">
+            <h1 style="margin-left:320px;">FINDNEWHOME</h1>
+           <hr style="width: 60%; border:2px solid #decc90; margin-left:220px;"/><br />
+        
+            <table align="center">
+                <tr>
+                    <td>이름</td>
+                    <td><input type="text" name="name" id="text" style="border:0.5px solid #decc90; height:40px; width:250px"/></td>
+                </tr>
+                <tr>
+                    <td>아이디</td>
+                    <td><input type="text" name="id" placeholder="아이디를 입력해주세요" style="border:0.5px solid #decc90; height:40px; width:250px"/></td>
+                </tr>
+                <tr>
+                    <td>비밀번호</td>
+                    <td><input type="text" name="password" placeholder="영문/숫자조합 6~12자리" style="border:0.5px solid #decc90; height:40px; width:250px"/></td>
+                </tr>
+                <tr>
+                    <td>생년월일</td>
+                    <td><input type="date" name="birth" style="border:0.5px solid #decc90; height:40px; width:250px"/></td>
+                </tr>
+                <tr>
+                    <td>휴대폰번호</td>
+                    <td><input type="text" name="phone1" maxlength="3" style="width:70px;height:35px; border:0.5px solid #decc90" />
+                        &nbsp-&nbsp<input type="text" name="phone2" maxlength="4" style="width:70px; height:35px; border:0.5px solid #decc90;" />&nbsp-&nbsp
+                        <input type="text" name="phone3" maxlength="4" style="width:70px; height:35px;border:0.5px solid #decc90;"/></td>
+                </tr>
+                <tr>
+                    <td><b>이메일</b></td>
+                    <td>
+                    <input type="text" name="email" style="border:0.5px solid #decc90; height:40px; width:130px" />@ 
+                	<select name="email2" style="border:0.5px solid #decc90; height:40px; width:150px;">
+                	<option selected value="naver.com">naver.com</option>
+                	<option value="daum.com">daum.com</option>
+                	<option value="hanmail.net">hanmail.net</option>
+                	<option value="gmail.com">gmail.com</option>
+                	<option value="nate.com">nate.com</option>
+                	</select>
+                	</td>
+                </tr>
+            </table>
+            
+           
+            <input type="submit" name="submit" value="가입하기" style="background-color: #343a40; border:none;  width:370px;height:40px; font-size:15pt; color:white;
+                                                                       margin-left:295px;" />
+
+    </form>
+
+</section>
+    <br />
+    <hr />
+    <br />
+    <footer align="center">
+        @copyright 2018 java wp2 
+    </footer>
+    <br />
+</body>
+</html>
